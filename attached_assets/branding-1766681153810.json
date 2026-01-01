@@ -1,0 +1,89 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "gg sans",
+      "count": 3
+    },
+    {
+      "family": "Noto Sans",
+      "count": 3
+    },
+    {
+      "family": "Helvetica Neue",
+      "count": 3
+    },
+    {
+      "family": "Helvetica",
+      "count": 3
+    },
+    {
+      "family": "Arial",
+      "count": 3
+    },
+    {
+      "family": "sans-serif",
+      "count": 3
+    }
+  ],
+  "colors": {
+    "primary": "#00112C",
+    "accent": "#0075FF",
+    "background": "#121214",
+    "textPrimary": "#121214",
+    "link": "#0075FF"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "gg sans",
+      "heading": "gg sans"
+    },
+    "fontStacks": {
+      "body": [
+        "gg sans",
+        "Noto Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ],
+      "heading": [
+        "gg sans",
+        "Noto Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "gg sans",
+        "Noto Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "16px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "8px"
+  },
+  "components": {},
+  "images": {
+    "logo": null,
+    "favicon": "https://discord.com/assets/favicon.ico",
+    "ogImage": "https://discord.com/assets/3e32a26f74dd0b05787417375bee3542.png"
+  },
+  "__framework_hints": [],
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}

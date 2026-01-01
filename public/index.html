@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kekse Clan Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div id="login-overlay">
+        <div class="login-side-image">
+            <h2>Kekse Clan<br>Dashboard</h2>
+            <p>Verwalte deinen Server, überwache Statistiken und steuere deinen Bot mit maximaler Effizienz.</p>
+        </div>
+        <div class="login-side-content">
+            <div class="login-box">
+                <h1>Willkommen zurück</h1>
+                <p>Bitte melde dich an, um fortzufahren.</p>
+                
+                <div class="input-group">
+                    <span class="label">Dashboard Passwort</span>
+                    <input type="password" id="loginPass" placeholder="••••••••">
+                </div>
+                
+                <label class="checkbox-container">
+                    <input type="checkbox" id="stayLoggedIn">
+                    Angemeldet bleiben
+                </label>
+                
+                <button id="loginBtn">Dashboard betreten</button>
+                <p id="loginError" style="color: var(--danger); margin-top: 1.5rem; display: none;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2 style="font-size: 1.2em; margin-bottom: 30px;">🍪 Kekse Clan</h2>
+        <div class="nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Dashboard</span>
+        </div>
+        <div class="nav-item" onclick="logout()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Abmelden</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
+            <div class="card">
+                <h2>System-Status</h2>
+                <div class="stat-grid">
+                    <div class="stat-card"><div class="stat-val" id="stat-count">0</div><div class="stat-lbl">Counting</div></div>
+                    <div class="stat-card"><div class="stat-val" id="stat-warns">0</div><div class="stat-lbl">Warns</div></div>
+                    <div class="stat-card"><div class="stat-val" id="stat-users">0</div><div class="stat-lbl">User</div></div>
+                    <div class="stat-card"><div class="stat-val" id="stat-uptime">0</div><div class="stat-lbl">Uptime</div></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Server-Infos</h2>
+                <div id="serverInfoContent">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <img id="guildIcon" src="" style="width: 50px; height: 50px; border-radius: 50%; background: #2f3136; display: none;">
+                        <div id="guildName" style="font-weight: bold; font-size: 1.1em;">Lade...</div>
+                    </div>
+                    <div class="stat-grid">
+                        <div class="stat-card"><div class="stat-val" id="guildMembers">0</div><div class="stat-lbl">Mitglieder</div></div>
+                        <div class="stat-card"><div class="stat-val" id="guildOnline" style="color: #3ba55c;">0</div><div class="stat-lbl">Online</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid" style="grid-template-columns: 350px 1fr;">
+            <div class="card">
+                <h2>Befehls-Konsole</h2>
+                <div style="position: relative;">
+                    <input type="text" id="cmdSearch" placeholder="Suchen & Auswählen..." onfocus="showCmdList()" oninput="filterCmds()">
+                    <div id="cmdList" style="display:none; position:absolute; top:100%; left:0; right:0; background:var(--sidebar); border:1px solid #444; z-index:100; max-height:200px; overflow-y:auto;"></div>
+                </div>
+                <input type="hidden" id="cmdSelect">
+                <div id="optCont"></div>
+                <button id="execBtn" style="margin-top:10px;">Ausführen</button>
+                <div id="response"></div>
+            </div>
+
+            <div class="card">
+                <h2>💻 Console Output</h2>
+                <div id="consoleOutput" class="console-card"></div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>🏆 Counting Rangliste</h2>
+                <div id="countingLeaderboard" class="id-list">Lade Rangliste...</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>📤 Nachricht senden</h2>
+                <div class="label">Kanal:</div>
+                <select id="sendChannelSelect"></select>
+                <div class="label">Text:</div>
+                <textarea id="sendText" placeholder="Deine Nachricht..." rows="3" style="width:100%; padding:12px; border-radius:4px; border:none; background:#40444b; color:white; margin:8px 0;"></textarea>
+                <button id="sendMsgBtn">Abschicken</button>
+            </div>
+            <div class="card">
+                <h2>🖼️ Embed senden</h2>
+                <div class="label">Kanal:</div>
+                <select id="embedChannelSelect"></select>
+                <div class="label">Titel:</div>
+                <input type="text" id="embedTitle" placeholder="Titel">
+                <div class="label">Beschreibung:</div>
+                <textarea id="embedDesc" placeholder="Inhalt..." rows="3" style="width:100%; padding:12px; border-radius:4px; border:none; background:#40444b; color:white; margin:8px 0;"></textarea>
+                <button id="sendEmbedBtn">Embed senden</button>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>💬 Kanäle & IDs</h2>
+                <div id="chanList" class="id-list">Lade...</div>
+            </div>
+            <div class="card">
+                <h2>👥 Mitglieder & IDs</h2>
+                <div id="memList" class="id-list">Lade...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const commands = [
+            { name: 'send', options: [{ name: 'channel', type: 'channel' }, { name: 'text', type: 'text' }] },
+            { name: 'embed', options: [{ name: 'channel', type: 'channel' }, { name: 'title', type: 'text' }, { name: 'description', type: 'text' }] },
+            { name: 'ban', options: [{ name: 'user', type: 'member' }, { name: 'reason', type: 'text' }] },
+            { name: 'kick', options: [{ name: 'user', type: 'member' }, { name: 'reason', type: 'text' }] },
+            { name: 'timeout', options: [{ name: 'user', type: 'member' }, { name: 'duration', type: 'text' }] },
+            { name: 'untimeout', options: [{ name: 'user', type: 'member' }] },
+            { name: 'unban', options: [{ name: 'user', type: 'text' }] },
+            { name: 'warn', options: [{ name: 'user', type: 'member' }, { name: 'reason', type: 'text' }] },
+            { name: 'warns', options: [{ name: 'user', type: 'member' }] },
+            { name: 'warn_remove', options: [{ name: 'user', type: 'member' }, { name: 'number', type: 'text' }] },
+            { name: 'giveaway', options: [{ name: 'prize', type: 'text' }, { name: 'channel', type: 'channel' }, { name: 'duration', type: 'text' }, { name: 'winners', type: 'text' }] },
+            { name: 'clear', options: [{ name: 'channel', type: 'channel' }, { name: 'amount', type: 'text' }] },
+            { name: 'setcounting', options: [{ name: 'channel', type: 'channel' }] },
+            { name: 'delcounting', options: [] },
+            { name: 'forcecount', options: [] },
+            { name: 'top', options: [] },
+            { name: 'ping', options: [] },
+            { name: 'help', options: [] },
+            { name: 'admin_help', options: [] }
+        ];
+
+        let stats = null;
+
+        function showCmdList() {
+            const list = document.getElementById('cmdList');
+            list.style.display = 'block';
+            filterCmds();
+        }
+
+        function filterCmds() {
+            const search = document.getElementById('cmdSearch').value.toLowerCase().replace(/^\//, '');
+            const list = document.getElementById('cmdList');
+            list.innerHTML = '';
+            commands.filter(c => c.name.toLowerCase().includes(search)).forEach(c => {
+                const item = document.createElement('div');
+                item.className = 'nav-item';
+                item.style.padding = '8px 12px';
+                item.textContent = '/' + c.name;
+                item.onclick = () => selectCmd(c.name);
+                list.appendChild(item);
+            });
+        }
+
+        function selectCmd(name) {
+            document.getElementById('cmdSearch').value = '/' + name;
+            document.getElementById('cmdSelect').value = name;
+            document.getElementById('cmdList').style.display = 'none';
+            
+            const cmd = commands.find(c => c.name === name);
+            const cont = document.getElementById('optCont');
+            cont.innerHTML = '';
+            if (!cmd) return;
+            cmd.options.forEach(o => {
+                const lbl = document.createElement('div');
+                lbl.className = 'label';
+                lbl.textContent = o.name + ':';
+                cont.appendChild(lbl);
+                
+                if (o.type === 'channel' && stats?.ids?.channels) {
+                    const s = document.createElement('select');
+                    s.dataset.name = o.name;
+                    stats.ids.channels.filter(ch => ch.type === 0).forEach(ch => {
+                        const opt = document.createElement('option');
+                        opt.value = ch.id; opt.textContent = '#' + ch.name;
+                        s.appendChild(opt);
+                    });
+                    cont.appendChild(s);
+                } else if (o.type === 'member' && stats?.ids?.members) {
+                    const s = document.createElement('select');
+                    s.dataset.name = o.name;
+                    stats.ids.members.forEach(m => {
+                        const opt = document.createElement('option');
+                        opt.value = m.id; opt.textContent = m.username;
+                        s.appendChild(opt);
+                    });
+                    cont.appendChild(s);
+                } else {
+                    const i = document.createElement('input');
+                    i.placeholder = o.name; i.dataset.name = o.name;
+                    cont.appendChild(i);
+                }
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#cmdSearch') && !e.target.closest('#cmdList')) {
+                document.getElementById('cmdList').style.display = 'none';
+            }
+        });
+
+        async function checkAuth() {
+            const r = await fetch('/api/check-auth');
+            const d = await r.json();
+            if (d.loggedIn) {
+                document.getElementById('login-overlay').style.display = 'none';
+                startDashboard();
+            }
+        }
+
+        document.getElementById('loginBtn').onclick = async () => {
+            const password = document.getElementById('loginPass').value;
+            const stayLoggedIn = document.getElementById('stayLoggedIn').checked;
+            const r = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password, stayLoggedIn })
+            });
+            const d = await r.json();
+            if (d.success) {
+                location.reload();
+            } else {
+                const err = document.getElementById('loginError');
+                err.textContent = d.error;
+                err.style.display = 'block';
+            }
+        };
+
+        async function logout() {
+            await fetch('/api/logout', { method: 'POST' });
+            location.reload();
+        }
+
+        function startDashboard() {
+            updateStats();
+            setInterval(updateStats, 10000);
+            
+            const sel = document.getElementById('cmdSelect');
+            commands.forEach(c => {
+                const o = document.createElement('option');
+                o.value = c.name; o.textContent = '/' + c.name;
+                sel.appendChild(o);
+            });
+
+            sel.onchange = () => {
+                const cmd = commands.find(c => c.name === sel.value);
+                const cont = document.getElementById('optCont');
+                cont.innerHTML = '';
+                if (!cmd) return;
+                cmd.options.forEach(o => {
+                    if (o.type === 'channel' && stats?.ids?.channels) {
+                        const s = document.createElement('select');
+                        s.dataset.name = o.name;
+                        stats.ids.channels.filter(ch => ch.type === 0).forEach(ch => {
+                            const opt = document.createElement('option');
+                            opt.value = ch.id; opt.textContent = '#' + ch.name;
+                            s.appendChild(opt);
+                        });
+                        cont.appendChild(s);
+                    } else if (o.type === 'member' && stats?.ids?.members) {
+                        const s = document.createElement('select');
+                        s.dataset.name = o.name;
+                        stats.ids.members.forEach(m => {
+                            const opt = document.createElement('option');
+                            opt.value = m.id; opt.textContent = m.username;
+                            s.appendChild(opt);
+                        });
+                        cont.appendChild(s);
+                    } else {
+                        const i = document.createElement('input');
+                        i.placeholder = o.name; i.dataset.name = o.name;
+                        cont.appendChild(i);
+                    }
+                });
+            };
+        }
+
+        async function updateStats() {
+            const r = await fetch('/api/stats');
+            if (r.status === 401) return logout();
+            stats = await r.json();
+            
+            document.getElementById('stat-count').textContent = stats.counting.currentNumber;
+            document.getElementById('stat-warns').textContent = stats.warningsCount;
+            document.getElementById('stat-users').textContent = stats.users;
+            document.getElementById('stat-uptime').textContent = Math.floor(stats.uptime / 60) + 'm';
+
+            // Update Guild Info
+            if (stats.guildInfo) {
+                document.getElementById('guildName').textContent = stats.guildInfo.name;
+                document.getElementById('guildMembers').textContent = stats.guildInfo.memberCount;
+                document.getElementById('guildOnline').textContent = stats.guildInfo.onlineCount;
+                if (stats.guildInfo.icon) {
+                    const icon = document.getElementById('guildIcon');
+                    icon.src = stats.guildInfo.icon;
+                    icon.style.display = 'block';
+                }
+            }
+
+            const cList = document.getElementById('chanList');
+            cList.innerHTML = stats.ids.channels.filter(c => c.type === 0).map(c => `
+                <div class="id-item"><span>#${c.name}</span><span class="id-val" onclick="copy('${c.id}')">${c.id}</span></div>
+            `).join('');
+
+            const mList = document.getElementById('memList');
+            mList.innerHTML = stats.ids.members.slice(0, 50).map(m => `
+                <div class="id-item"><span>${m.username}</span><span class="id-val" onclick="copy('${m.id}')">${m.id}</span></div>
+            `).join('');
+
+            // Update Leaderboard
+            const lList = document.getElementById('countingLeaderboard');
+            if (stats.leaderboard && stats.leaderboard.length > 0) {
+                lList.innerHTML = stats.leaderboard.map((u, i) => `
+                    <div class="id-item">
+                        <span>#${i+1} ${u.username}</span>
+                        <span style="color: var(--primary); font-weight: bold;">${u.score} Pkt.</span>
+                    </div>
+                `).join('');
+            } else {
+                lList.innerHTML = '<div class="id-item">Noch keine Daten vorhanden</div>';
+            }
+
+            // Update Send/Embed dropdowns
+            const sendSel = document.getElementById('sendChannelSelect');
+            const embSel = document.getElementById('embedChannelSelect');
+            const channels = stats.ids.channels.filter(c => c.type === 0);
+            
+            [sendSel, embSel].forEach(s => {
+                const current = s.value;
+                s.innerHTML = channels.map(c => `<option value="${c.id}" ${c.id === current ? 'selected' : ''}>#${c.name}</option>`).join('');
+            });
+
+            // Update Console Logs
+            updateLogs();
+            if (!window.logInterval) {
+                window.logInterval = setInterval(updateLogs, 2000);
+            }
+        }
+
+        async function updateLogs() {
+            try {
+                const r = await fetch('/api/logs');
+                if (r.status === 401) return;
+                const logs = await r.json();
+                const out = document.getElementById('consoleOutput');
+                if (!out) return;
+                const isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 10;
+                
+                out.innerHTML = logs.map(l => `
+                    <div class="log-entry ${l.type === 'error' ? 'log-error' : ''}">
+                        <span class="log-time">[${l.timestamp}]</span>
+                        ${l.message}
+                    </div>
+                `).join('');
+                
+                if (isScrolledToBottom) {
+                    out.scrollTop = out.scrollHeight;
+                }
+            } catch (e) {}
+        }
+
+        document.getElementById('sendMsgBtn').onclick = async () => {
+            const channel = document.getElementById('sendChannelSelect').value;
+            const text = document.getElementById('sendText').value;
+            if (!text) return alert('Bitte Text eingeben');
+            await executeCommand('send', [{ name: 'channel', value: channel }, { name: 'text', value: text }]);
+            document.getElementById('sendText').value = '';
+        };
+
+        document.getElementById('sendEmbedBtn').onclick = async () => {
+            const channel = document.getElementById('embedChannelSelect').value;
+            const title = document.getElementById('embedTitle').value;
+            const desc = document.getElementById('embedDesc').value;
+            if (!title || !desc) return alert('Titel und Beschreibung erforderlich');
+            await executeCommand('embed', [{ name: 'channel', value: channel }, { name: 'title', value: title }, { name: 'description', value: desc }]);
+            document.getElementById('embedTitle').value = '';
+            document.getElementById('embedDesc').value = '';
+        };
+
+        async function executeCommand(name, opts) {
+            const resp = document.getElementById('response');
+            resp.style.display = 'block'; resp.textContent = 'Verarbeite...';
+            const r = await fetch('/interactions', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-Signature-Ed25519': 'simulated' },
+                body: JSON.stringify({
+                    type: 2,
+                    data: { name, options: opts },
+                    member: { user: { id: '1151971830983311441' }, roles: ['1424020019070898186'], permissions: '8' }
+                })
+            });
+            const d = await r.json();
+            resp.textContent = d.data?.content || 'Aktion ausgeführt.';
+            updateStats();
+        }
+
+        document.getElementById('execBtn').onclick = async () => {
+            const sel = document.getElementById('cmdSelect');
+            if (!sel.value) return;
+            const opts = Array.from(document.querySelectorAll('#optCont input, #optCont select')).map(i => ({
+                name: i.dataset.name, value: i.value
+            }));
+            await executeCommand(sel.value, opts);
+        };
+
+        function copy(text) { navigator.clipboard.writeText(text); alert('ID kopiert!'); }
+
+        checkAuth();
+    </script>
+</body>
+</html>

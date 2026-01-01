@@ -1,0 +1,816 @@
+{
+  "guild": {
+    "id": "1423413347168157718",
+    "name": "Kekse Clan"
+  },
+  "channels": [
+    {
+      "id": "1423413348065611949",
+      "name": "𝚁𝚎𝚐𝚎𝚕𝚠𝚎𝚛𝚔",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348065611950",
+      "name": "𝚆𝚒𝚕𝚕𝚔𝚘𝚖𝚖𝚎𝚗",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348065611953",
+      "name": "Chat Support",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423413348065611958",
+      "name": "Management",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423413348220796991",
+      "name": "𝙻𝚘𝚐𝚜",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348220796995",
+      "name": "𝚃𝚛𝚊𝚗𝚜𝚌𝚛𝚒𝚙𝚝𝚜",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348220796996",
+      "name": "𝙳𝚊𝚝𝚎𝚒𝚗",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348220796997",
+      "name": "Mitgliederbereich",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423413348220796998",
+      "name": "𝙲𝚑𝚊𝚝",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348220796999",
+      "name": "𝙱𝚒𝚕𝚍𝚎𝚛",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348220797000",
+      "name": "𝙺𝚎𝚔𝚜-𝚉𝚒𝚝𝚊𝚝𝚎",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348392898763",
+      "name": "𝙷𝚊𝚗𝚍𝚎𝚕",
+      "type": 15,
+      "typeName": "ForumChannel"
+    },
+    {
+      "id": "1423413348392898769",
+      "name": "✦༺𝙿𝚛𝚒𝚟𝚊𝚝༻✦",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423413348392898770",
+      "name": "Talks",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423413348392898771",
+      "name": "𝙺𝚎𝚔𝚜 𝚃𝚊𝚕𝚔 𝟷",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1423413348493430896",
+      "name": "𝙺𝚎𝚔𝚜 𝚃𝚊𝚕𝚔 𝟸",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1423413348493430897",
+      "name": "𝙺𝚎𝚔𝚜 𝚃𝚊𝚕𝚔 𝟹",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1423413348493430898",
+      "name": "𝙺𝚎𝚔𝚜 𝙲𝚑𝚊𝚘𝚜",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1423413348493430901",
+      "name": "𝙰𝙵𝙺 (ᴋᴇᴋꜱᴇ ᴇꜱꜱᴇɴ)",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1423413348493430902",
+      "name": "Temporäre Talks",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423413348493430904",
+      "name": "Support",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423413348493430905",
+      "name": "𝚃𝚒𝚌𝚔𝚎𝚝",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423434079390535730",
+      "name": "𝙺𝚎𝚔𝚜-𝙲𝚘𝚞𝚗𝚝𝚎𝚛",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423438527319900180",
+      "name": "𝙹𝚘𝚒𝚗 𝚃𝚘 𝙲𝚛𝚎𝚊𝚝𝚎",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1423441064232222800",
+      "name": "𝙼𝚘𝚍-𝙲𝚑𝚊𝚝",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1423637381256446123",
+      "name": "Informationen",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1423637547363467346",
+      "name": "𝙽𝚎𝚠𝚜",
+      "type": 5,
+      "typeName": "NewsChannel"
+    },
+    {
+      "id": "1423637646634123294",
+      "name": "𝙶𝚒𝚟𝚎𝚊𝚠𝚊𝚢𝚜",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1426271033047912582",
+      "name": "Third Level Support",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1426553032988033105",
+      "name": "𝚉𝚒𝚝𝚊𝚝𝚎",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1428436317943103610",
+      "name": "𝙺𝙴𝙺𝚂𝙴-𝙲𝚑𝚊𝚝",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1428436547031662694",
+      "name": "𝙺𝙴𝙺𝚂𝙴-𝙱𝚒𝚕𝚍𝚎𝚛",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1428439836112720033",
+      "name": "Öffentlicher Berreich",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1430657100337647807",
+      "name": "𝙺𝙴𝙺𝚂𝙴-𝚃𝚊𝚕𝚔",
+      "type": 2,
+      "typeName": "VoiceChannel"
+    },
+    {
+      "id": "1434277603023392840",
+      "name": "𝙱𝚎𝚠𝚎𝚛𝚋𝚞𝚗𝚐𝚎𝚗",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1434277752982474945",
+      "name": "Bewerbungen",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1436073961120333926",
+      "name": "KEKSE Bereich",
+      "type": 4,
+      "typeName": "CategoryChannel"
+    },
+    {
+      "id": "1436074576076472411",
+      "name": "𝙺𝙴𝙺𝚂𝙴-𝙲𝚑𝚊𝚝",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1436074672876683394",
+      "name": "𝙺𝙴𝙺𝚂𝙴-𝙱𝚒𝚕𝚍𝚎𝚛",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1436074759002652932",
+      "name": "𝙺𝙴𝙺𝚂𝙴-𝚉𝚒𝚝𝚊𝚝𝚎",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1439337595090898955",
+      "name": "verification",
+      "type": 0,
+      "typeName": "TextChannel"
+    },
+    {
+      "id": "1455919206951293071",
+      "name": "⚙️-cubxbuilder-8417",
+      "type": 0,
+      "typeName": "TextChannel"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1436073052638285959",
+      "name": "Test Member"
+    },
+    {
+      "id": "1425910779366080624",
+      "name": "Flamingo"
+    },
+    {
+      "id": "1424028847963111424",
+      "name": "News"
+    },
+    {
+      "id": "1444380829781594264",
+      "name": "Ente"
+    },
+    {
+      "id": "1424023641829675031",
+      "name": "Jockie Music"
+    },
+    {
+      "id": "1423427747103113307",
+      "name": "Admin"
+    },
+    {
+      "id": "1424020019070898186",
+      "name": "Moderator"
+    },
+    {
+      "id": "1423428139790499983",
+      "name": "Member"
+    },
+    {
+      "id": "1423428722647629954",
+      "name": "Lily Pad"
+    },
+    {
+      "id": "1423422056850002053",
+      "name": "Ticket Tool"
+    },
+    {
+      "id": "1423422481531666505",
+      "name": "ProBot ✨"
+    },
+    {
+      "id": "1436000001972113581",
+      "name": "Invite Tracker"
+    },
+    {
+      "id": "1423413347168157718",
+      "name": "@everyone"
+    },
+    {
+      "id": "1423429838533820436",
+      "name": "Keksproduktionsmaschine"
+    },
+    {
+      "id": "1454169207838216253",
+      "name": "Dev"
+    },
+    {
+      "id": "1423427446199554108",
+      "name": "Keksfreund"
+    },
+    {
+      "id": "1424125112822665246",
+      "name": "Gebannt"
+    },
+    {
+      "id": "1424028376322146405",
+      "name": "Gambler"
+    },
+    {
+      "id": "1424028924387786762",
+      "name": "Umfragen"
+    },
+    {
+      "id": "1439337577508245837",
+      "name": "Unverified"
+    },
+    {
+      "id": "1439336387814883441",
+      "name": "Security"
+    },
+    {
+      "id": "1439333914622562439",
+      "name": "Muted"
+    },
+    {
+      "id": "1424028650080178348",
+      "name": "Giveaways"
+    },
+    {
+      "id": "1452256939525279747",
+      "name": "Kekse Clan"
+    },
+    {
+      "id": "1423423398402461832",
+      "name": "Apollo"
+    },
+    {
+      "id": "1423423250427416708",
+      "name": "EasyPoll"
+    },
+    {
+      "id": "1434555291252297728",
+      "name": "VIP"
+    },
+    {
+      "id": "1434556390998933694",
+      "name": "MineVale Team"
+    },
+    {
+      "id": "1424028581910151299",
+      "name": "Kadse"
+    },
+    {
+      "id": "1439002477826543710",
+      "name": "GiveawayBot"
+    },
+    {
+      "id": "1438211903783698594",
+      "name": "Mv Quit"
+    },
+    {
+      "id": "1423423030352416851",
+      "name": "carl-bot"
+    },
+    {
+      "id": "1423422808159031451",
+      "name": "VoiceMaster"
+    }
+  ],
+  "members": [
+    {
+      "id": "1444721256795607112",
+      "username": "sascha787",
+      "tag": "sascha787"
+    },
+    {
+      "id": "1232644707171958805",
+      "username": "eym_king_017.",
+      "tag": "eym_king_017."
+    },
+    {
+      "id": "1266400369383047231",
+      "username": "raksor_11",
+      "tag": "raksor_11"
+    },
+    {
+      "id": "1439208169829044275",
+      "username": "minestormer2620",
+      "tag": "minestormer2620"
+    },
+    {
+      "id": "1288729552801107981",
+      "username": "nitramlp3",
+      "tag": "nitramlp3"
+    },
+    {
+      "id": "1323329952879480923",
+      "username": "poloxhd_36305",
+      "tag": "poloxhd_36305"
+    },
+    {
+      "id": "1011686864568193116",
+      "username": "fuzzysoap16240",
+      "tag": "fuzzysoap16240"
+    },
+    {
+      "id": "1142488142897758268",
+      "username": "space4girls",
+      "tag": "space4girls"
+    },
+    {
+      "id": "235148962103951360",
+      "username": "Carl-bot",
+      "tag": "Carl-bot#1536"
+    },
+    {
+      "id": "1275425602349830238",
+      "username": "ottoto_der_echte",
+      "tag": "ottoto_der_echte"
+    },
+    {
+      "id": "371649310137384960",
+      "username": "_firewarrior20_",
+      "tag": "_firewarrior20_"
+    },
+    {
+      "id": "475744554910351370",
+      "username": "Apollo",
+      "tag": "Apollo#5552"
+    },
+    {
+      "id": "557628352828014614",
+      "username": "Ticket Tool",
+      "tag": "Ticket Tool#4843"
+    },
+    {
+      "id": "1201211788872659054",
+      "username": "dj_julix48",
+      "tag": "dj_julix48"
+    },
+    {
+      "id": "1262749075174985859",
+      "username": "erione13_17463",
+      "tag": "erione13_17463"
+    },
+    {
+      "id": "1213907520549167147",
+      "username": "einfachername.",
+      "tag": "einfachername."
+    },
+    {
+      "id": "1172824752528838768",
+      "username": "metecem_",
+      "tag": "metecem_"
+    },
+    {
+      "id": "1215705226896740386",
+      "username": "supergirlli",
+      "tag": "supergirlli"
+    },
+    {
+      "id": "1106836986351857814",
+      "username": "imperium2010",
+      "tag": "imperium2010"
+    },
+    {
+      "id": "1434152337190027294",
+      "username": "aronservalod",
+      "tag": "aronservalod"
+    },
+    {
+      "id": "1107410616123134063",
+      "username": "eliteriese66",
+      "tag": "eliteriese66"
+    },
+    {
+      "id": "1051093106386284597",
+      "username": "flora_12.",
+      "tag": "flora_12."
+    },
+    {
+      "id": "823530336851066901",
+      "username": ".dominicc.",
+      "tag": ".dominicc."
+    },
+    {
+      "id": "1333007881250930790",
+      "username": "ente_64",
+      "tag": "ente_64"
+    },
+    {
+      "id": "1274320881585356892",
+      "username": "cubeindustry.",
+      "tag": "cubeindustry."
+    },
+    {
+      "id": "411916947773587456",
+      "username": "Jockie Music",
+      "tag": "Jockie Music#8158"
+    },
+    {
+      "id": "173554407408009217",
+      "username": "byzel",
+      "tag": "byzel"
+    },
+    {
+      "id": "628632671484117027",
+      "username": "k_re_n",
+      "tag": "k_re_n"
+    },
+    {
+      "id": "472911936951156740",
+      "username": "VoiceMaster",
+      "tag": "VoiceMaster#9351"
+    },
+    {
+      "id": "1095598578568810557",
+      "username": "jubropro",
+      "tag": "jubropro"
+    },
+    {
+      "id": "1089227392029044746",
+      "username": "budgingaleks3",
+      "tag": "budgingaleks3"
+    },
+    {
+      "id": "270519783835828224",
+      "username": "mr07888",
+      "tag": "mr07888"
+    },
+    {
+      "id": "1446850474471850016",
+      "username": "leandroospielt",
+      "tag": "leandroospielt"
+    },
+    {
+      "id": "1436676349476606115",
+      "username": "totis.erno",
+      "tag": "totis.erno"
+    },
+    {
+      "id": "1177314433698115636",
+      "username": "julian07295",
+      "tag": "julian07295"
+    },
+    {
+      "id": "1106234376427143238",
+      "username": "jar1108",
+      "tag": "jar1108"
+    },
+    {
+      "id": "1099384774222680124",
+      "username": "gabxtreme",
+      "tag": "gabxtreme"
+    },
+    {
+      "id": "1370076678637748224",
+      "username": ".finn_wave",
+      "tag": ".finn_wave"
+    },
+    {
+      "id": "651095740390834176",
+      "username": "Security",
+      "tag": "Security#1120"
+    },
+    {
+      "id": "1106885134864613407",
+      "username": "mineb73793",
+      "tag": "mineb73793"
+    },
+    {
+      "id": "1416787374700236941",
+      "username": "tim3847.",
+      "tag": "tim3847."
+    },
+    {
+      "id": "1310730812731424812",
+      "username": "simso1612",
+      "tag": "simso1612"
+    },
+    {
+      "id": "1230208321995149325",
+      "username": "zagros0415",
+      "tag": "zagros0415"
+    },
+    {
+      "id": "745298246980599838",
+      "username": "maxverstappenf",
+      "tag": "maxverstappenf"
+    },
+    {
+      "id": "1437033715829309450",
+      "username": "nilo_250_02183",
+      "tag": "nilo_250_02183"
+    },
+    {
+      "id": "544540694077767681",
+      "username": "alex_fynn_ghg",
+      "tag": "alex_fynn_ghg"
+    },
+    {
+      "id": "530343541872918528",
+      "username": "nes1276",
+      "tag": "nes1276"
+    },
+    {
+      "id": "1346918189375688804",
+      "username": "itzjoshy2699",
+      "tag": "itzjoshy2699"
+    },
+    {
+      "id": "910556828457402389",
+      "username": "maxe2203",
+      "tag": "maxe2203"
+    },
+    {
+      "id": "1047547302333649016",
+      "username": "nickpsr",
+      "tag": "nickpsr"
+    },
+    {
+      "id": "294882584201003009",
+      "username": "GiveawayBot",
+      "tag": "GiveawayBot#2381"
+    },
+    {
+      "id": "987357529107476510",
+      "username": "anticllama",
+      "tag": "anticllama"
+    },
+    {
+      "id": "1395778435682533456",
+      "username": "leonie082312",
+      "tag": "leonie082312"
+    },
+    {
+      "id": "1341476313806012476",
+      "username": "olente_",
+      "tag": "olente_"
+    },
+    {
+      "id": "1406541925590372432",
+      "username": "_thetocraft",
+      "tag": "_thetocraft"
+    },
+    {
+      "id": "1254916941018042430",
+      "username": "cubeindustry",
+      "tag": "cubeindustry"
+    },
+    {
+      "id": "1195438644589232218",
+      "username": "nicknock200_01882",
+      "tag": "nicknock200_01882"
+    },
+    {
+      "id": "243830938549747723",
+      "username": "soenke1991soenke",
+      "tag": "soenke1991soenke"
+    },
+    {
+      "id": "1083788822376099960",
+      "username": "kiaxon",
+      "tag": "kiaxon"
+    },
+    {
+      "id": "720351927581278219",
+      "username": "Invite Tracker",
+      "tag": "Invite Tracker#0478"
+    },
+    {
+      "id": "1271382539101016146",
+      "username": "tarantula_flo",
+      "tag": "tarantula_flo"
+    },
+    {
+      "id": "1083465090977771582",
+      "username": "lamar_ademi",
+      "tag": "lamar_ademi"
+    },
+    {
+      "id": "1334582973785309234",
+      "username": "drachenrose2",
+      "tag": "drachenrose2"
+    },
+    {
+      "id": "1192423110490738709",
+      "username": "_smbdo_",
+      "tag": "_smbdo_"
+    },
+    {
+      "id": "1117500437386494043",
+      "username": "minemeer",
+      "tag": "minemeer"
+    },
+    {
+      "id": "1394708479666819172",
+      "username": "_hi_493",
+      "tag": "_hi_493"
+    },
+    {
+      "id": "1188984365661827222",
+      "username": "diana3333.",
+      "tag": "diana3333."
+    },
+    {
+      "id": "1212107037228535918",
+      "username": "betterjungel",
+      "tag": "betterjungel"
+    },
+    {
+      "id": "1285592213933391984",
+      "username": "chaosfan2008",
+      "tag": "chaosfan2008"
+    },
+    {
+      "id": "1429845194106343497",
+      "username": "unwichtig_2",
+      "tag": "unwichtig_2"
+    },
+    {
+      "id": "1240304690051285047",
+      "username": "scout_2403_69792",
+      "tag": "scout_2403_69792"
+    },
+    {
+      "id": "1062436951266951198",
+      "username": "airstorm.",
+      "tag": "airstorm."
+    },
+    {
+      "id": "282859044593598464",
+      "username": "ProBot ✨",
+      "tag": "ProBot ✨#5803"
+    },
+    {
+      "id": "1446854992760934533",
+      "username": "ghcjtewv",
+      "tag": "ghcjtewv"
+    },
+    {
+      "id": "1258646540143034429",
+      "username": "maxi012733",
+      "tag": "maxi012733"
+    },
+    {
+      "id": "437618149505105920",
+      "username": "EasyPoll",
+      "tag": "EasyPoll#3712"
+    },
+    {
+      "id": "1192159371560485005",
+      "username": "galileo2508",
+      "tag": "galileo2508"
+    },
+    {
+      "id": "1445821999229440043",
+      "username": "luansky0727",
+      "tag": "luansky0727"
+    },
+    {
+      "id": "1151971830983311441",
+      "username": "cubxbuilder",
+      "tag": "cubxbuilder"
+    },
+    {
+      "id": "1143151029706293409",
+      "username": "mkv_27_26835",
+      "tag": "mkv_27_26835"
+    },
+    {
+      "id": "1444400580712726623",
+      "username": "Kekse Clan",
+      "tag": "Kekse Clan#0066"
+    },
+    {
+      "id": "1014186378000601139",
+      "username": "dragongameer6269",
+      "tag": "dragongameer6269"
+    },
+    {
+      "id": "1446483505637756948",
+      "username": "javin11_j",
+      "tag": "javin11_j"
+    },
+    {
+      "id": "1327903687904854044",
+      "username": "defender12353_",
+      "tag": "defender12353_"
+    }
+  ]
+}
